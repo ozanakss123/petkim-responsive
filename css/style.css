@@ -1,0 +1,418 @@
+  @media only screen and (max-width: 600px) {
+      .container {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: minmax(100px, auto);
+      }
+      .desklet {
+          display: none;
+      }
+      .desktop {
+          display: none;
+      }
+      main {
+          grid-row: 2;
+          grid-column: 1/13;
+      }
+      footer {
+          grid-row: 5;
+          grid-column: 1/13;
+      }
+      .header {
+          grid-column: 1/12;
+          grid-row: 1;
+      }
+      .logo {
+          width: 30%;
+          max-width: 120px;
+          float: left;
+          display: block;
+          margin-top: 0.2em;
+      }
+      .mobilefirst {
+          width: 100%;
+          height: 100%;
+          grid-column: 2/6;
+          grid-row: 1;
+      }
+      .mobilesecond {
+          width: 100%;
+          height: 100%;
+          grid-column: 6/11;
+          grid-row: 1;
+      }
+      footer {
+          background-color: #fff;
+          grid-row: 6;
+          grid-column: 1/13;
+          display: flex;
+      }
+      footer p {
+          display: none;
+      }
+      .socarlogo {
+          display: flex;
+          width: 40%;
+          align-content: flex-end;
+      }
+      .facebook,
+      .twitter,
+      .youtube,
+      .linkedin {
+          display: flex;
+          margin-bottom: 0.5em;
+          margin-right: 1em;
+          margin-top: 1em;
+          width: 90%;
+          height: 50%;
+      }
+      /* Hamburger Menu */
+      body {
+          margin: 0;
+          font-family: Montserrat, sans-serif;
+          background-color: #f4f4f4;
+      }
+      a {
+          color: #000;
+      }
+      /* header */
+      .header {
+          background-color: #fff;
+          box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+          position: fixed;
+          width: 100%;
+          z-index: 3;
+      }
+      .header ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          overflow: hidden;
+          background-color: #fff;
+      }
+      .header li a {
+          display: block;
+          padding: 20px 20px;
+          border-right: 1px solid #f4f4f4;
+          text-decoration: none;
+      }
+      .header li a:hover,
+      .header .menu-btn:hover {
+          background-color: #6fb668;
+          color: white;
+      }
+      .header .logo {
+          display: block;
+          float: left;
+          font-size: 2em;
+          padding: 10px 20px;
+          text-decoration: none;
+      }
+      /* menu */
+      .header .menu {
+          clear: both;
+          max-height: 0;
+          transition: max-height .2s ease-out;
+      }
+      /* menu icon */
+      .header .menu-icon {
+          cursor: pointer;
+          display: inline-block;
+          float: right;
+          padding: 40px 40px;
+          position: relative;
+          user-select: none;
+      }
+      .header .menu-icon .navicon {
+          background: rgb(78, 32, 32);
+          display: block;
+          height: 2px;
+          position: relative;
+          transition: background .2s ease-out;
+          width: 18px;
+      }
+      .header .menu-icon .navicon:before,
+      .header .menu-icon .navicon:after {
+          background: #333;
+          content: '';
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all .2s ease-out;
+          width: 100%;
+      }
+      .header .menu-icon .navicon:before {
+          top: 5px;
+      }
+      .header .menu-icon .navicon:after {
+          top: -5px;
+      }
+      /* menu btn */
+      .header .menu-btn {
+          display: none;
+      }
+      .header .menu-btn:checked~.menu {
+          max-height: 440px;
+      }
+      .header .menu-btn:checked~.menu-icon .navicon {
+          background: transparent;
+      }
+      .header .menu-btn:checked~.menu-icon .navicon:before {
+          transform: rotate(-45deg);
+      }
+      .header .menu-btn:checked~.menu-icon .navicon:after {
+          transform: rotate(45deg);
+      }
+      .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+      .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+          top: 0;
+      }
+  }
+  
+  @media only screen and (min-width: 601px) {
+      .header li {
+          float: left;
+      }
+      .header li a {
+          padding: 20px 30px;
+      }
+      .header .menu {
+          clear: none;
+          float: right;
+          max-height: none;
+      }
+      .header .menu-icon {
+          display: block;
+      }
+      .mobile-main {
+          display: none;
+      }
+      /* Hamburger Menu */
+      body {
+          margin: 0;
+          font-family: Montserrat, sans-serif;
+          background-color: #f4f4f4;
+      }
+      a {
+          color: #000;
+      }
+      /* header */
+      .header {
+          background-color: #fff;
+          box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+          position: fixed;
+          width: 100%;
+          z-index: 3;
+      }
+      .header ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          overflow: hidden;
+          background-color: #fff;
+      }
+      .header li a {
+          display: block;
+          padding: 20px 20px;
+          border-right: 1px solid #f4f4f4;
+          text-decoration: none;
+      }
+      .header li a:hover,
+      .header .menu-btn:hover {
+          background-color: #6fb668;
+          color: white;
+      }
+      .header .logo {
+          display: block;
+          float: left;
+          font-size: 2em;
+          padding: 10px 20px;
+          text-decoration: none;
+      }
+      /* menu */
+      .header .menu {
+          clear: both;
+          max-height: 0;
+          transition: max-height .2s ease-out;
+      }
+      /* menu icon */
+      .header .menu-icon {
+          cursor: pointer;
+          display: inline-block;
+          float: right;
+          padding: 40px 40px;
+          position: relative;
+          user-select: none;
+      }
+      .header .menu-icon .navicon {
+          background: rgb(78, 32, 32);
+          display: block;
+          height: 2px;
+          position: relative;
+          transition: background .2s ease-out;
+          width: 18px;
+      }
+      .header .menu-icon .navicon:before,
+      .header .menu-icon .navicon:after {
+          background: #333;
+          content: '';
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all .2s ease-out;
+          width: 100%;
+      }
+      .header .menu-icon .navicon:before {
+          top: 5px;
+      }
+      .header .menu-icon .navicon:after {
+          top: -5px;
+      }
+      /* menu btn */
+      .header .menu-btn {
+          display: none;
+      }
+      .header .menu-btn:checked~.menu {
+          max-height: 440px;
+      }
+      .header .menu-btn:checked~.menu-icon .navicon {
+          background: transparent;
+      }
+      .header .menu-btn:checked~.menu-icon .navicon:before {
+          transform: rotate(-45deg);
+      }
+      .header .menu-btn:checked~.menu-icon .navicon:after {
+          transform: rotate(45deg);
+      }
+      .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+      .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+          top: 0;
+      }
+      /* Main Code */
+      .container {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: auto;
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: minmax(100px, auto);
+      }
+      main {
+          grid-column: 1/13;
+          grid-row: 2;
+      }
+      .header {
+          grid-column: 1/12;
+          grid-row: 1;
+      }
+      .desklet {
+          grid-row: 2;
+      }
+      .logo {
+          width: 30%;
+          max-width: 120px;
+          float: left;
+          display: block;
+          margin-top: 0.2em;
+      }
+      footer {
+          background-color: #fff;
+          grid-row: 7;
+          grid-column: 1/13;
+          display: flex;
+          align-items: center;
+      }
+      footer p {
+          display: none;
+      }
+      .socarlogo {
+          display: flex;
+          width: 20%;
+          align-content: flex-end;
+          margin-left: 0.3em;
+          margin-right: 15em;
+      }
+      .facebook,
+      .twitter,
+      .youtube,
+      .linkedin {
+          margin-bottom: 0.5em;
+          margin-right: 1em;
+          width: 60%;
+          height: 75%;
+          align-self: flex-end;
+      }
+      .desklet {
+          width: 100%;
+          height: 80%;
+          margin-top: 0;
+          display: block;
+      }
+      footer:last-child {
+          page-break-after: auto;
+      }
+  }
+  
+  @media only screen and (min-width: 1100px) {
+      .header li {
+          float: left;
+      }
+      .header li a {
+          padding: 20px 30px;
+      }
+      .header .menu {
+          clear: none;
+          float: right;
+          max-height: none;
+      }
+      .header .menu-icon {
+          display: none;
+      }
+      .mobile-main {
+          display: none;
+      }
+      .desklet {
+          display: block;
+          width: 100%;
+          height: 30%;
+      }
+      .header li a {
+          margin-top: 0.8em;
+      }
+      footer {
+          background-color: #fff;
+          grid-row: 6;
+          grid-column: 1/13;
+          display: flex;
+          align-items: center;
+      }
+      footer p {
+          font-size: 12px;
+          font-family: Montserrat, sans-serif;
+          text-align: center;
+          display: flex;
+          align-items: flex-end;
+          margin-left: 15em;
+          margin-right: 15em;
+      }
+      .socarlogo {
+          display: flex;
+          width: 30%;
+          align-content: flex-end;
+          margin-left: 0.3em;
+      }
+      .facebook,
+      .twitter,
+      .youtube,
+      .linkedin {
+          display: flex;
+          margin-bottom: 0.5em;
+          margin-right: 1em;
+          width: 80%;
+          height: 40%;
+      }
+  }
